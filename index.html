@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luciana Garrido — Diseñadora gráfica &amp; UX/UI</title>
-<meta name="description" content="Portfolio de Luciana Garrido. Diseño gráfico, identidad de marca y UX/UI. Mendoza, Argentina.">
+<title>Luciana Garrido — Diseñadora Gráfica | Branding e Identidad Visual</title>
+<meta name="description" content="Portfolio de Luciana Garrido. Branding e identidad visual. Mendoza, Argentina, disponible para trabajo remoto.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23513229'/%3E%3Cpath d='M50 18 C56 42 66 50 90 56 C66 62 56 70 50 94 C44 70 34 62 10 56 C34 50 44 42 50 18z' fill='%23F4F1E2'/%3E%3C/svg%3E">
 
 <style>
@@ -193,7 +193,8 @@ nav a.cta:hover{background:var(--yellow);color:var(--ink)}
 .pcard .kind{position:absolute;top:0;right:0;background:var(--sage);color:var(--ink);
   font-family:var(--sub);font-weight:700;font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;padding:6px 12px;z-index:2}
-.pcard .kind.free{background:var(--yellow)}
+.pcard .kind.k-freelance{background:var(--yellow)}
+.pcard .kind.k-pasanta{background:var(--blue)}
 /* titulos de proyecto: tipografia de texto en negrita, no la display */
 .pcard h3{font-family:var(--body);font-weight:700;
   font-size:clamp(18px,1.5vw,22px);line-height:1.24;letter-spacing:-.01em;
@@ -208,6 +209,15 @@ nav a.cta:hover{background:var(--yellow);color:var(--ink)}
   border-radius:999px;padding:4px 10px}
 
 /* ============ CV DESPLEGABLE ============ */
+.xp{background:var(--cream);padding:clamp(80px,10vw,140px) var(--pad)}
+.xp-in{max-width:var(--maxw);margin:0 auto}
+.xp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;
+  flex-wrap:wrap;border-bottom:3px solid var(--ink);padding-bottom:26px;
+  margin-bottom:clamp(28px,3.4vw,44px)}
+.xp-head h2{margin-top:12px}
+.xp-head p{max-width:40ch;color:var(--ink-70)}
+.xp-list{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,58px)}
+@media (max-width:1040px){.xp-list{grid-template-columns:1fr;gap:30px}}
 .cv{background:var(--yellow);padding:clamp(80px,10vw,140px) var(--pad)}
 .cv-in{max-width:var(--maxw);margin:0 auto}
 .cv-head{display:flex;justify-content:space-between;align-items:flex-end;
@@ -239,6 +249,10 @@ nav a.cta:hover{background:var(--yellow);color:var(--ink)}
   display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:baseline;
   transition:padding-left .35s var(--ease)}
 .item:hover{padding-left:10px}
+.cv-cols>div:first-child .item{grid-template-columns:132px 1fr}
+.cv-cols>div:last-child .item{grid-template-columns:98px 1fr}
+.xp-list .item{grid-template-columns:120px 1fr}
+@media (max-width:680px){.cv-cols>div .item,.xp-list .item{grid-template-columns:1fr}}
 .item time{font-family:var(--sub);font-weight:600;font-size:12px;
   color:var(--ink-70);white-space:nowrap}
 .item h4{font-family:var(--sub);font-weight:700;font-size:clamp(15px,1.35vw,18px);line-height:1.25}
@@ -338,7 +352,7 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
   .pcard h3,.pcard p{min-height:0}
   nav{gap:0;padding:5px 6px;max-width:calc(100vw - 24px)}
   nav a{padding:8px 12px;font-size:12.5px;white-space:nowrap}
-  nav a[href="#inicio"],nav a[href="#cv"]{display:none}
+  nav a[href="#inicio"],nav a[href="#experiencia"]{display:none}
   .hero{min-height:auto;padding-top:120px}
   .hero-foot{flex-direction:column;align-items:flex-start}
   .hero-end{align-items:flex-start;text-align:left}
@@ -365,6 +379,7 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
   <a href="#inicio">Inicio</a>
   <a href="#sobre">Sobre mí</a>
   <a href="#proyectos">Proyectos</a>
+  <a href="#experiencia">Experiencia</a>
   <a href="#cv">CV</a>
   <a class="cta" href="#contacto">Contacto</a>
 </nav>
@@ -383,15 +398,15 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
   </div>
 
   <div class="hero-in">
-    <p class="eyebrow rv">Diseñadora gráfica &amp; UX/UI — Mendoza, Argentina</p>
+    <p class="eyebrow rv">Diseñadora Gráfica | Branding e Identidad Visual</p>
     <h1 class="hero-name">
       <span class="ln"><span>Luciana</span></span>
       <span class="ln"><span><em>Garrido</em></span></span>
     </h1>
     <div class="hero-foot">
-      <p class="lede rv rv-d1"><b>Diseño identidades que se sostienen y pantallas que se entienden.</b> Vengo del UX: antes de elegir una tipografía pregunto para quién es y qué problema resuelve.</p>
+      <p class="lede rv rv-d1"><b>Diseño marcas completas: logotipo, paleta, tipografía y las piezas donde todo eso se aplica.</b> Antes de proponer me meto en el rubro del cliente, para que la marca le hable de verdad a su público.</p>
       <div class="hero-end rv rv-d2">
-        <p class="eyebrow">Portfolio 2026 · Disponible full-time</p>
+        <p class="eyebrow">Mendoza, Argentina · Remoto, horario flexible</p>
         <a class="scrollcue" href="#sobre"><i></i> Deslizá</a>
       </div>
     </div>
@@ -408,14 +423,14 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
     <div>
       <p class="eyebrow rv">01 — Sobre mí</p>
       <h2 class="h-sec rv rv-d1">Hola, soy Luciana</h2>
-      <p class="rv rv-d1">Estudio la Licenciatura en Diseño Gráfico y Digital en la Universidad Champagnat de Mendoza. Hace cuatro años que trabajo diseñando interfaces, identidades y sistemas visuales.</p>
-      <p class="rv rv-d2">Vengo desde el diseño UX/UI y eso me dejó una forma de trabajar que también aplico al diseño gráfico, <b>donde nada se define solo por gusto y cada decisión resuelve algo concreto.</b></p>
-      <p class="rv rv-d2">Lo que más me interesa es el punto donde la identidad de marca y la interfaz se cruzan: <b>que el manual y la pantalla hablen el mismo idioma, con las mismas reglas.</b></p>
-      <p class="rv rv-d3">Uso herramientas de IA para agilizar el research y explorar ideas, <b>es una herramienta, no el autor, la decisión final sigue siendo mía.</b></p>
+      <p class="rv rv-d1">Soy diseñadora gráfica y trabajo sobre todo en branding e identidad visual: logotipos, paletas de color, sistemas tipográficos y piezas para entornos digitales y redes.</p>
+      <p class="rv rv-d2">Antes de proponer nada me gusta conocer a fondo al cliente y su rubro, <b>para que cada marca conecte de verdad con su público y no se parezca a todas las demás.</b></p>
+      <p class="rv rv-d2">Vengo del diseño UX/UI, que me dio criterio de jerarquía visual, consistencia de marca y costumbre de trabajar con feedback. <b>Hoy es el complemento de lo que hago, no el centro.</b></p>
+      <p class="rv rv-d3">Estudio la Licenciatura en Diseño Gráfico y Digital en la Universidad Champagnat de Mendoza y en diciembre de 2026 termino la Técnicatura. <b>Soy proactiva, me muevo bien con las correcciones y siempre llego con ideas nuevas.</b></p>
     </div>
     <div class="about-photo rv rv-d2">
       <img src="assets/img/luciana-sobre.webp" alt="Retrato de Luciana Garrido">
-      <span class="tape">Diseñadora gráfica &amp; UX/UI</span>
+      <span class="tape">Branding e identidad visual</span>
     </div>
   </div>
 </section>
@@ -429,9 +444,48 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
       <p class="eyebrow on-dark rv">02 — Proyectos</p>
       <h2 class="h-sec rv rv-d1">Marcas y piezas</h2>
     </div>
-    <p class="rv rv-d2">Identidades para clientes reales y proyectos de la Universidad Champagnat. Todos diseñados íntegramente por mí. Tocá cualquiera para ver el proyecto completo.</p>
+    <p class="rv rv-d2">Branding para Veka Studio, una pasantía en Mikastudio, trabajos freelance y de la Universidad Champagnat. Tocá el que quieras para ver el proyecto completo.</p>
   </div>
   <div class="grid" id="grid"></div>
+</section>
+
+<!-- ===== EXPERIENCIA UX/UI ===== -->
+<section class="xp" id="experiencia">
+  <div class="xp-in">
+    <div class="xp-head">
+      <div>
+        <p class="eyebrow rv">03 — Experiencia UX/UI</p>
+        <h2 class="h-sec rv rv-d1">De dónde vengo</h2>
+      </div>
+      <p class="rv rv-d2">Antes del branding trabajé cuatro años diseñando producto digital. De ahí me quedó el criterio de jerarquía, la consistencia de marca y la costumbre de trabajar con feedback.</p>
+    </div>
+    <div class="xp-list">
+      <div class="item rv">
+        <time>Ene 2025 — Mar 2026</time>
+        <div>
+          <h4>Diseñadora UX/UI — Fydels</h4>
+          <span>Mendoza, Argentina</span>
+          <ul>
+            <li>Rediseño de pantallas clave de una plataforma de fidelización, mejorando la jerarquía visual y la claridad de la información.</li>
+            <li>Evolución del sistema de diseño y de los lineamientos visuales del producto, cuidando la consistencia de marca.</li>
+            <li>Diseño de interfaces web y mobile en Figma, con wireframes, prototipos y validación con usuarios.</li>
+            <li>Trabajo con equipo multidisciplinario y con desarrollo en la implementación.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item rv rv-d1">
+        <time>Sep 2021 — Ene 2025</time>
+        <div>
+          <h4>Diseñadora UX/UI (freelance) — DilloStore</h4>
+          <span>Argentina (remoto)</span>
+          <ul>
+            <li>Rediseño completo de la app de DilloStore, una tienda de retail autónomo: flujos, wireframes, prototipos e interfaz visual.</li>
+            <li>Definición de componentes reutilizables y lineamientos visuales para mantener la coherencia del producto.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ===== CV ===== -->
@@ -439,7 +493,7 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
   <div class="cv-in">
     <div class="cv-head">
       <div>
-        <p class="eyebrow rv">03 — Trayectoria</p>
+        <p class="eyebrow rv">04 — Trayectoria</p>
         <h2 class="h-sec rv rv-d1">Mi CV</h2>
       </div>
       <div class="cv-actions rv rv-d2">
@@ -458,7 +512,7 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
 
       <div class="cv-block">
         <h3>En pocas palabras</h3>
-        <p style="max-width:70ch">Diseñadora gráfica y UX/UI con cuatro años de experiencia entre trabajo freelance y equipos de producto. Diseño identidades de marca completas, desde el manual hasta su aplicación, e interfaces validadas con usuarios reales. Con base en Mendoza, Argentina.</p>
+        <p style="max-width:72ch">Diseñadora gráfica enfocada en branding e identidad visual. Diseño logotipos, paletas de color, sistemas tipográficos y piezas gráficas para entornos digitales y redes sociales. Antes de proponer, me gusta conocer a fondo al cliente y su rubro, para que cada marca conecte de verdad con su público. Vengo del diseño UX/UI, lo que me dio criterio de jerarquía visual, consistencia de marca y trabajo con feedback.</p>
       </div>
 
       <div class="cv-block">
@@ -466,28 +520,49 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
         <div class="cv-cols">
           <div>
             <div class="item">
+              <time>Ago 2026 — Actualidad</time>
+              <div>
+                <h4>Diseñadora Gráfica (freelance) — Veka Studio</h4>
+                <span>Buenos Aires, Argentina (remoto)</span>
+                <ul>
+                  <li>Diseño de logotipos, paletas de color y selección tipográfica para proyectos de branding y rebranding.</li>
+                  <li>Arboredo (vivero café, Santa Fe): isotipo que fusiona una taza de café con una planta, y paleta que equilibra verdes y tonos tierra con un rosa vibrante de contraste.</li>
+                  <li>Indómita (cerámica artesanal): logotipo construido a partir de la letra manuscrita de la fundadora, con una paleta de colores vibrantes que se aleja de los tonos terrosos del rubro.</li>
+                  <li>Trabajo junto a la directora del estudio en el desarrollo de la identidad visual y el manual de marca, aportando propuestas de mejora en cada etapa.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <time>Ago 2026 — Oct 2026</time>
+              <div>
+                <h4>Pasante de Diseño Gráfico — Mikastudio</h4>
+                <span>Chile (remoto desde Mendoza, Argentina)</span>
+                <ul>
+                  <li>Pasantía de 60 horas diseñando carruseles y posteos para Instagram, respetando la línea gráfica editorial del estudio.</li>
+                  <li>Muy buena recepción de las correcciones, proactividad y propuesta constante de ideas y soluciones nuevas.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
               <time>Ene 2025 — Mar 2026</time>
               <div>
                 <h4>Diseñadora UX/UI — Fydels</h4>
                 <span>Mendoza, Argentina</span>
                 <ul>
-                  <li>Diseñé y optimicé interfaces web y mobile, con mejoras medibles en usabilidad.</li>
-                  <li>Realicé research de usuarios, entrevistas y pruebas de usabilidad.</li>
-                  <li>Desarrollé wireframes y prototipos interactivos validados con testing.</li>
-                  <li>Trabajé dentro de un equipo multidisciplinario.</li>
+                  <li>Rediseño de pantallas clave de una plataforma de fidelización, mejorando la jerarquía visual y la claridad de la información.</li>
+                  <li>Evolución del sistema de diseño y de los lineamientos visuales del producto.</li>
+                  <li>Diseño de interfaces web y mobile en Figma, con wireframes, prototipos y validación con usuarios.</li>
                 </ul>
               </div>
             </div>
             <div class="item">
-              <time>Nov 2021 — Ene 2025</time>
+              <time>Sep 2021 — Ene 2025</time>
               <div>
-                <h4>Diseñadora UX/UI — Freelance</h4>
-                <span>Mendoza, Argentina</span>
+                <h4>Diseñadora UX/UI (freelance) — DilloStore</h4>
+                <span>Argentina (remoto)</span>
                 <ul>
-                  <li>Diseñé interfaces digitales y prototipos responsive para distintas industrias.</li>
-                  <li>Ejecuté research, entrevistas y pruebas de usabilidad de principio a fin.</li>
-                  <li>Creé sistemas de diseño escalables con componentes reutilizables.</li>
-                  <li>Proyecto destacado: DilloStore, rediseño completo.</li>
+                  <li>Rediseño completo de la app de una tienda de retail autónomo: flujos, wireframes, prototipos e interfaz visual.</li>
+                  <li>Definición de componentes reutilizables y lineamientos visuales.</li>
                 </ul>
               </div>
             </div>
@@ -495,11 +570,11 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
           <div>
             <div class="item">
               <time>2025 — 2028</time>
-              <div><h4>Licenciatura en Diseño Gráfico y Digital</h4><span>Universidad Champagnat, Mendoza</span></div>
+              <div><h4>Licenciatura en Diseño Gráfico y Digital</h4><span>Universidad Champagnat, Mendoza · En curso, 2.º año</span></div>
             </div>
             <div class="item">
               <time>2025 — 2026</time>
-              <div><h4>Técnica en Diseño Gráfico y Digital</h4><span>Universidad Champagnat, Mendoza</span></div>
+              <div><h4>Técnica en Diseño Gráfico y Digital</h4><span>Universidad Champagnat, Mendoza · Título intermedio, finaliza en diciembre de 2026</span></div>
             </div>
             <div class="item">
               <time>2024</time>
@@ -524,18 +599,18 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
       <div class="cv-block">
         <h3>Aptitudes</h3>
         <ul class="caps">
-          <li><b>Identidad y sistemas de marca</b> — manuales, rebranding y aplicación en todos los soportes</li>
-          <li><b>Diseño de interfaces web y mobile</b> — de wireframe a prototipo navegable</li>
-          <li><b>Research y validación</b> — entrevistas, pruebas de usabilidad y análisis de resultados</li>
-          <li><b>Design systems</b> — componentes y librerías escalables</li>
-          <li><b>Diseño editorial y maquetación</b></li>
-          <li><b>Dirección de arte y señalética</b></li>
-          <li><b>Ilustración vectorial y retoque digital</b></li>
+          <li><b>Branding e identidad visual</b> — construcción de marca desde el concepto hasta su aplicación</li>
+          <li><b>Diseño de logotipos</b> — isotipos, logotipos e isologotipos</li>
+          <li><b>Paleta de color y tipografía</b> — sistemas cromáticos y tipográficos coherentes</li>
+          <li><b>Manuales de marca</b> — usos, variantes y lineamientos</li>
+          <li><b>Piezas gráficas y diseño para redes</b> — carruseles, posteos y material de marca</li>
+          <li><b>Jerarquía visual</b> — orden de lectura y claridad en cada pieza</li>
+          <li><b>Diseño UX/UI</b> — interfaces web y mobile, wireframes y prototipos</li>
         </ul>
         <div class="cv-meta">
-          <div><span>Herramientas</span><b>Illustrator · Photoshop · Herramientas de IA</b></div>
-          <div><span>Metodologías</span><b>Design Thinking · Lean UX · Agile (Scrum / Kanban)</b></div>
-          <div><span>Idiomas</span><b>Español nativo · Inglés B2</b></div>
+          <div><span>Herramientas</span><b>Illustrator · Photoshop · InDesign · Lightroom · After Effects · Animate · Figma · CapCut</b></div>
+          <div><span>Forma de trabajo</span><b>Atención al detalle · Recepción de feedback · Proactividad · Investigación de cliente y sector · Trabajo remoto</b></div>
+          <div><span>Idiomas</span><b>Español nativo · Inglés B2 (AMICANA, 2024)</b></div>
         </div>
       </div>
 
@@ -547,9 +622,9 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
 <section class="contact" id="contacto">
   <div class="wall" style="background-image:url('assets/patron-stickers.svg')"></div>
   <div class="contact-in">
-    <p class="eyebrow on-dark rv">04 — Contacto</p>
+    <p class="eyebrow on-dark rv">05 — Contacto</p>
     <h2 class="h-sec rv rv-d1" style="margin-left:0">Hablemos</h2>
-    <p class="lede rv rv-d1">Contame qué tenés en mente y vemos cómo resolverlo.</p>
+    <p class="lede rv rv-d1">Contame qué tenés en mente y vemos cómo resolverlo. Trabajo de forma remota, en horario de España.</p>
     <a class="mailto rv rv-d2" href="mailto:lucianagarridoux.ui@gmail.com?subject=Hola%20Luciana">lucianagarridoux.ui@gmail.com</a>
     <div class="links rv rv-d3">
       <a href="https://wa.me/5492613016747?text=Hola%20Luciana%2C%20vi%20tu%20portfolio" target="_blank" rel="noopener">WhatsApp</a>
@@ -588,6 +663,89 @@ footer{background:var(--ink);color:var(--cream-70);padding:24px var(--pad);
 <script>
 const GALLERIES = [
   {
+    "title": "Indómita — Rebranding",
+    "meta": "Veka Studio · Rebranding 2026",
+    "desc": "Marca de cerámica artesanal. Hice el logotipo a partir de la letra manuscrita de la fundadora, vectorizada para que conserve la irregularidad de lo hecho a mano. También definí la paleta de colores vibrantes, elegida para alejarse de los tonos terrosos del rubro, y la tipografía.",
+    "tags": [
+      "Rebranding",
+      "Logotipo",
+      "Paleta de color",
+      "Tipografía"
+    ],
+    "kind": "Freelance",
+    "cover": "assets/img/cover-indomita.webp",
+    "images": [
+      "assets/img/indomita-01.webp",
+      "assets/img/indomita-02.webp",
+      "assets/img/indomita-03.webp",
+      "assets/img/indomita-04.webp",
+      "assets/img/indomita-05.webp",
+      "assets/img/indomita-06.webp",
+      "assets/img/indomita-07.webp",
+      "assets/img/indomita-08.webp",
+      "assets/img/indomita-09.webp",
+      "assets/img/indomita-10.webp",
+      "assets/img/indomita-11.webp",
+      "assets/img/indomita-12.webp",
+      "assets/img/indomita-13.webp"
+    ]
+  },
+  {
+    "title": "Arboredo — Branding",
+    "meta": "Veka Studio · Branding 2026",
+    "desc": "Vivero café en San Lorenzo, Santa Fe. Hice el isotipo, que fusiona una taza de café con una planta, la paleta de verdes y tonos tierra con un rosa vibrante de contraste, y la tipografía. La identidad completa y el manual de marca los desarrolló la directora del estudio, y yo participé aportando ideas de mejora en cada etapa.",
+    "tags": [
+      "Branding",
+      "Isotipo",
+      "Paleta de color",
+      "Tipografía"
+    ],
+    "kind": "Freelance",
+    "cover": "assets/img/cover-arboredo.webp",
+    "images": [
+      "assets/img/arboredo-01.webp",
+      "assets/img/arboredo-02.webp",
+      "assets/img/arboredo-03.webp",
+      "assets/img/arboredo-04.webp",
+      "assets/img/arboredo-05.webp",
+      "assets/img/arboredo-06.webp",
+      "assets/img/arboredo-07.webp",
+      "assets/img/arboredo-08.webp",
+      "assets/img/arboredo-09.webp",
+      "assets/img/arboredo-10.webp",
+      "assets/img/arboredo-11.webp",
+      "assets/img/arboredo-12.webp",
+      "assets/img/arboredo-13.webp",
+      "assets/img/arboredo-14.webp",
+      "assets/img/arboredo-15.webp",
+      "assets/img/arboredo-16.webp"
+    ]
+  },
+  {
+    "title": "Mikastudio — Carrusel para Instagram",
+    "meta": "Mikastudio, Chile · Pasantía 2026",
+    "desc": "Carrusel sobre el uso de la IA y el criterio creativo, con estética editorial, hecho durante una pasantía remota de 60 horas entre agosto y octubre de 2026. Es la única pieza de la pasantía que puedo publicar: el resto todavía no salió.",
+    "tags": [
+      "Redes sociales",
+      "Editorial",
+      "Carrusel",
+      "Dirección de arte"
+    ],
+    "kind": "Pasantía",
+    "cover": "assets/img/cover-mikastudio.webp",
+    "images": [
+      "assets/img/mika-01.webp",
+      "assets/img/mika-02.webp",
+      "assets/img/mika-03.webp",
+      "assets/img/mika-04.webp",
+      "assets/img/mika-05.webp",
+      "assets/img/mika-06.webp",
+      "assets/img/mika-07.webp",
+      "assets/img/mika-08.webp",
+      "assets/img/mika-09.webp"
+    ]
+  },
+  {
     "title": "Club de Real Estate — Manual de marca",
     "meta": "Freelance · Plataforma educativa",
     "desc": "Identidad para una plataforma digital de cursos sobre el mercado inmobiliario. El isologotipo cruza un birrete con un volumen isométrico de tres capas: formación y propiedad en un mismo signo.",
@@ -597,7 +755,6 @@ const GALLERIES = [
       "Isologotipo",
       "Educación"
     ],
-    "free": true,
     "cover": "assets/img/cover-club.webp",
     "images": [
       "assets/img/club-01.webp",
@@ -617,7 +774,8 @@ const GALLERIES = [
       "assets/img/club-15.webp",
       "assets/img/club-16.webp",
       "assets/img/club-17.webp"
-    ]
+    ],
+    "kind": "Freelance"
   },
   {
     "title": "Vicencio Real Estate — Manual de marca",
@@ -629,7 +787,6 @@ const GALLERIES = [
       "Isologotipo",
       "Real estate"
     ],
-    "free": true,
     "cover": "assets/img/cover-vicencio.webp",
     "images": [
       "assets/img/vicencio-01.webp",
@@ -643,7 +800,8 @@ const GALLERIES = [
       "assets/img/vicencio-09.webp",
       "assets/img/vicencio-10.webp",
       "assets/img/vicencio-11.webp"
-    ]
+    ],
+    "kind": "Freelance"
   },
   {
     "title": "Ades — Manual de marca",
@@ -655,7 +813,6 @@ const GALLERIES = [
       "Rebranding",
       "Sistema visual"
     ],
-    "free": false,
     "cover": "assets/img/cover-ades.webp",
     "images": [
       "assets/img/ades-01.webp",
@@ -688,36 +845,8 @@ const GALLERIES = [
       "assets/img/ades-28.webp",
       "assets/img/ades-29.webp",
       "assets/img/ades-30.webp"
-    ]
-  },
-  {
-    "title": "Bien Menduco — Sistema de signos",
-    "meta": "Cátedra Sistema de Signos · Universidad Champagnat · 2026",
-    "desc": "Sistema de señalética y app para la calle Arístides Villanueva, en Mendoza. Zonificación cromática, pictogramas de trazo uniforme y tótems con QR para regular el flujo de gente.",
-    "tags": [
-      "Señalética",
-      "Sistema de signos",
-      "UI mobile",
-      "Espacio urbano"
     ],
-    "free": false,
-    "cover": "assets/img/cover-menduco.webp",
-    "images": [
-      "assets/img/menduco-01.webp",
-      "assets/img/menduco-02.webp",
-      "assets/img/menduco-03.webp",
-      "assets/img/menduco-04.webp",
-      "assets/img/menduco-05.webp",
-      "assets/img/menduco-06.webp",
-      "assets/img/menduco-07.webp",
-      "assets/img/menduco-08.webp",
-      "assets/img/menduco-09.webp",
-      "assets/img/menduco-10.webp",
-      "assets/img/menduco-11.webp",
-      "assets/img/menduco-12.webp",
-      "assets/img/menduco-13.webp",
-      "assets/img/menduco-14.webp"
-    ]
+    "kind": "Académico"
   },
   {
     "title": "Dogue — Tapa de revista",
@@ -729,11 +858,11 @@ const GALLERIES = [
       "Tipografía",
       "Dirección de arte"
     ],
-    "free": false,
     "cover": "assets/img/cover-dogue.webp",
     "images": [
       "assets/img/dogue-01.webp"
-    ]
+    ],
+    "kind": "Académico"
   },
   {
     "title": "Blueberry — Café Nutria",
@@ -745,11 +874,11 @@ const GALLERIES = [
       "Fotomontaje",
       "Publicidad"
     ],
-    "free": false,
     "cover": "assets/img/cover-blueberry.webp",
     "images": [
       "assets/img/blueberry-01.webp"
-    ]
+    ],
+    "kind": "Académico"
   }
 ];
 
@@ -770,8 +899,8 @@ const GALLERIES = [
 (function(){
   const star='<svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M50 6 C56 34 66 44 94 50 C66 56 56 66 50 94 C44 66 34 56 6 50 C34 44 44 34 50 6z"/></svg>';
   const sets={
-    marq1:['Identidad de marca','Diseño editorial','UX/UI','Sistemas visuales','Maquetación','Dirección de arte'],
-    marq2:['Research','Design systems','Rebranding','Prototipado','Señalética','Tipografía']
+    marq1:['Branding','Identidad visual','Logotipos','Paleta de color','Tipografía','Dirección de arte'],
+    marq2:['Rebranding','Sistemas de marca','Piezas para redes','Jerarquía visual','Manuales de marca','UX/UI']
   };
   for(const id in sets){
     const html=sets[id].map(w=>`<span>${w}</span>${star}`).join('');
@@ -800,7 +929,7 @@ const GALLERIES = [
     a.innerHTML=`
       <div class="shot">
         <span class="num">${String(i+1).padStart(2,'0')}</span>
-        <span class="kind ${g.free?'free':''}">${g.free?'Freelance':'Académico'}</span>
+        <span class="kind k-${g.kind.toLowerCase().replace(/[^a-z]/g,'')}">${g.kind}</span>
         <img src="${g.cover}" alt="${g.title}" loading="lazy">
         <span class="veil"></span>
         <span class="open">Ver proyecto</span>
